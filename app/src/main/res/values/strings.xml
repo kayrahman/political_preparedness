@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Political Preparedness</string>
+    <string name="upcoming_elections">Upcoming Elections</string>
+    <string name="find_representatives">Find my representatives</string>
+    <string name="title">Title</string>
+    <string name="date">Sun Jun 06 00:00:00 EDT 2021</string>
+    <string name="saved_elections">Saved Elections</string>
+    <string name="follow_elections">Follow Election</string>
+    <string name="unfollow_elections">Unfollow Election</string>
+    <string name="voting_locations">Voting Locations</string>
+    <string name="ballot_info">Ballot Information</string>
+    <string name="election_info">Election Information</string>
+    <string name="use_my_loc">Use my location</string>
+    <!-- TODO: Add necessary string values -->
+    <string name="location_required_error">Location services must be enabled to use the app</string>
+    <string name="add_line_one">Address Line 1</string>
+    <string name="add_line_two">Address Line 2</string>
+    <string name="city">City</string>
+    <string name="zip">Zip</string>
+    <string name="representative_search">Representative Search</string>
+    <string name="my_representatives">My representatives</string>
+    <string name="no_result">No Result</string>
+    <string name="field_empty">Fields empty</string>
+    <string name="loc_error">Location Error</string>
+    <string name="loc_not_found">Location not found</string>
+    <string name="empty_add_one">Address line one empty</string>
+    <string name="empty_add_two">Address line two empty</string>
+    <string name="empty_city">City empty</string>
+    <string name="empty_state">State empty</string>
+    <string name="empty_zip">Zip code empty</string>
+
+</resources>

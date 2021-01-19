@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <data>
+
+    <variable
+        name="representative"
+        type="com.example.android.politicalpreparedness.representative.model.Representative">
+
+    </variable>
+    </data>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/ll_main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/space_small"
+    android:layout_marginEnd="@dimen/space_small"
+   >
+
+
+    <ImageView
+        android:id="@+id/iv_image"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:profileImage = "@{representative.official.photoUrl}"
+        tools:src = "@drawable/ic_profile"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:text="President Of The United States"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:textStyle="bold"
+        android:text="@{representative.office.name}"
+        android:textSize="18sp"
+        android:layout_marginStart="@dimen/space_normal"
+        app:layout_constraintTop_toTopOf="@+id/iv_image"
+        app:layout_constraintBottom_toTopOf="@id/name"
+        app:layout_constraintStart_toEndOf="@+id/iv_image"
+        app:layout_constraintVertical_chainStyle="packed"
+        />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:text="Donald J Trump"
+        android:text="@{representative.official.name}"
+        style="@style/TextAppearance.AppCompat.Subhead"
+        android:layout_marginStart="@dimen/space_normal"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintBottom_toTopOf="@+id/party_name"
+        app:layout_constraintStart_toEndOf="@+id/iv_image"
+
+        />
+
+    <TextView
+        android:id="@+id/party_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:text="Republican party"
+        style="@style/TextAppearance.AppCompat.Small"
+        android:text="@{representative.official.party}"
+        android:layout_marginStart="@dimen/space_normal"
+        app:layout_constraintStart_toEndOf="@+id/iv_image"
+        app:layout_constraintTop_toBottomOf="@id/name"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_image"
+        />
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="@+id/name"
+        app:layout_constraintBottom_toBottomOf="@+id/party_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+        <ImageView
+            android:id="@+id/www_icon"
+            android:layout_width="@dimen/social_icon_size"
+            android:layout_height="@dimen/social_icon_size"
+            app:srcCompat = "@drawable/ic_www"
+            />
+        <ImageView
+            android:id="@+id/facebook_icon"
+            android:layout_width="@dimen/social_icon_size"
+            android:layout_height="@dimen/social_icon_size"
+            app:srcCompat = "@drawable/ic_facebook"
+            android:layout_marginStart="@dimen/space_small"
+            android:layout_marginEnd="@dimen/space_small"
+            />
+        <ImageView
+            android:id="@+id/twitter_icon"
+            android:layout_width="@dimen/social_icon_size"
+            android:layout_height="@dimen/social_icon_size"
+            app:srcCompat = "@drawable/ic_twitter"
+            />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
